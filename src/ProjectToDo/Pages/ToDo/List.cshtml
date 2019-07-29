@@ -1,0 +1,19 @@
+﻿@page
+@model MyApp.Namespace.ListModel
+@{
+    ViewData["Title"] = "To-Do List";
+}
+
+<h1>To-Do List</h1>
+
+<ul>
+    <li>@Model.MyToDo.Name</li>
+    @foreach (var todo in Model.ToDoList)
+    {
+        <li>
+            @todo.Id | @todo.Name | @todo.Priority
+        </li>
+    }
+</ul>
+
+@Model.Message
